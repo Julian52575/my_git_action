@@ -7,17 +7,9 @@ jobs:
       run:
         shell: bash
         working-directory: /app
-        env:
-          MY_VAR: ${{ github.action_path }}
+
     steps:
-      - echo: ${{ github.action_path }}
-      - run: echo MY_VAR
+      - env: ${{ github.action_path }}
+        echo: MY_VAR
       - run: ls -l
       - run: make re
-  
-  execution:
-    runs-on: ubuntu-latest
-    steps:
-      - run: cd ${{ github.action_path }} 
-      - run: ls -l
-      - run: ./a.out 42
