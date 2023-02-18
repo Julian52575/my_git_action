@@ -1,5 +1,5 @@
 name: learn-github-actions
-run-name: ${{ github.event_name }} or ${{ github.triggering_actor }} triggered this workflow on repo ${{ github.repository }} . Owner and repo name of the action: ${{ github.action_repository }} . 
+run-name: ${{ github.event_name }} or ${{ github.triggering_actor }} triggered this workflow on repo ${{ github.repository }} . #Owner and repo name of the action: ${{ github.action_repository }} . 
 on : [push]
 jobs:
   check-bats-version:
