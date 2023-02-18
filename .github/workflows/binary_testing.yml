@@ -3,9 +3,15 @@ on : [push]
 jobs:
   compiling:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: /app
+        env:
+          MY_VAR: ${{ github.action_path }}
     steps:
       - echo: ${{ github.action_path }}
-      - run: cd ${{ github.action_path }}
+      - run: echo MY_VAR
       - run: ls -l
       - run: make re
   
