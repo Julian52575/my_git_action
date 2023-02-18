@@ -11,6 +11,6 @@ jobs:
     steps:
       - env: 
           MY_VAR: ${{ github.action_path }}
-        run: echo MY_VAR
+        run: echo ${MY_VAR}
       - run: ls -l
       - run: make re
