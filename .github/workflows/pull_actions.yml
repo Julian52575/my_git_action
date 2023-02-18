@@ -1,6 +1,6 @@
 name: pull-actions
 run-name:  ${{ github.triggering_actor }} , asked for a ${{ github.event_name }} .
-on : [pull]
+on : [pull_request]
 jobs:
   something-about-pulls:
     runs-on: ubuntu-latest
