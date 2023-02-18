@@ -1,0 +1,12 @@
+name: binary-testing
+on : [push]
+jobs:
+  compiling:
+    runs-on: ubuntu-latest
+    steps:
+      - run: make re
+  
+  execution:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ./a.out 42
