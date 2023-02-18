@@ -14,8 +14,6 @@ jobs:
       - run: ls -la
       - run: echo "Golgoth\n"
 
-name: learn-github-actions2
-run-name:  ${{ github.triggering_actor }} did a [ ${{ github.event_name }} ]
 on : [pull]
 jobs:
   compile_test:
