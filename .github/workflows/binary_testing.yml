@@ -4,15 +4,13 @@ jobs:
   compiling:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -l
-      - run: cd ../..
+      - run: cd ${{ github.action_path }}
       - run: ls -l
       - run: make re
   
   execution:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -l
-      - run: cd ../..
+      - run: cd ${{ github.action_path }} 
       - run: ls -l
       - run: ./a.out 42
