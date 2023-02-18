@@ -9,7 +9,8 @@ jobs:
         working-directory: /app
 
     steps:
-      - env: ${{ github.action_path }}
-        echo: MY_VAR
+      - env: 
+          MY_VAR: ${{ github.action_path }}
+        run: echo MY_VAR
       - run: ls -l
       - run: make re
