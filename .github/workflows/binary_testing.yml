@@ -4,6 +4,7 @@ jobs:
   compiling:
     runs-on: ubuntu-latest
     steps:
+      - echo: ${{ github.action_path }}
       - run: cd ${{ github.action_path }}
       - run: ls -l
       - run: make re
