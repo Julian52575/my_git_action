@@ -1,9 +1,9 @@
 name: pull-actions
 run-name:  ${{ github.triggering_actor }} , asked for a ${{ github.event_name }} .
 on : [pull]
-  jobs:
-    something-about-pulls:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "-42 incomming for" 
-        - run: echo ${{ github.triggering_actor }}
+jobs:
+  something-about-pulls:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "-42 incomming for" 
+      - run: echo ${{ github.triggering_actor }}
