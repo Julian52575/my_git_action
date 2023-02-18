@@ -1,5 +1,5 @@
 name: learn-github-actions
-run-name: ${{ github.event_name }} or ${{ github.triggering_actor }} triggered this workflow on repo ${{ github.repository }} . #Owner and repo name of the action: ${{ github.action_repository }} . 
+run-name: [ ${{ github.event_name }} ], ${{ github.triggering_actor }} triggered this workflow on repo ${{ github.repository }} . #Owner and repo name of the action: ${{ github.action_repository }} . 
 on : [push]
 jobs:
   check-bats-version:
@@ -14,3 +14,13 @@ jobs:
       - run: ls -la
       - run: echo "Golgoth\n"
 
+name: learn-github-actions2
+run-name:  ${{ github.triggering_actor }} did a [ ${{ github.event_name }} ]
+on : [pull]
+jobs:
+  compile_test:
+    runs-on: ubuntu-latest
+    step:
+      - run: make re
+      - run: ./a.out 255
+      - run: echo $?
