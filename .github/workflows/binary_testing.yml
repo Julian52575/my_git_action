@@ -4,9 +4,11 @@ jobs:
   compiling:
     runs-on: ubuntu-latest
     steps:
+      - run: cd ../..
       - run: make re
   
   execution:
     runs-on: ubuntu-latest
     steps:
+      - run: cd ../..
       - run: ./a.out 42
