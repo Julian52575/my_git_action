@@ -16,5 +16,5 @@ jobs:
       - run: pwd
       - run: ls -l
       - run: sudo apt install tree
-        run: tree
+      - run: tree
       - run: make re
