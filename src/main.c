@@ -49,5 +49,5 @@ int main(int ac, char **av)
     char *str = my_int_to_str(nb);
     write(1, str, my_strlen(str));
     write(1, "\n", 1);
-    return nb;
+    return 0;
 }
